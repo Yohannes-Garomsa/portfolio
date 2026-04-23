@@ -267,7 +267,10 @@
         background: rgba(255, 255, 255, 0.04);
         color: #e8eefb;
         font-size: 0.9rem;
-        transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+        transition:
+          transform 0.25s ease,
+          background 0.25s ease,
+          color 0.25s ease;
       }
       .tag-list {
         gap: 0.75rem;
@@ -329,6 +332,7 @@
         background: #8c5bff;
         border: 4px solid rgba(255, 255, 255, 0.06);
         box-shadow: 0 0 0 4px rgba(140, 91, 255, 0.12);
+        animation: pulse-dot 2.2s ease-in-out infinite;
       }
       .timeline-item.left::before {
         right: -38px;
@@ -343,6 +347,33 @@
         padding: 1.8rem;
         box-shadow: 0 30px 60px rgba(0, 0, 0, 0.22);
         min-height: 260px;
+        transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+      }
+      .timeline-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 45px 90px rgba(0, 0, 0, 0.3);
+        border-color: rgba(140, 91, 255, 0.28);
+      }
+      .timeline-card:hover .timeline-action {
+        color: #ffffff;
+      }
+      .timeline-card .timeline-action {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        color: #8c5bff;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 0.82rem;
+        transition: color 0.25s ease, transform 0.25s ease;
+        cursor: pointer;
+      }
+      .timeline-card .timeline-action:hover {
+        transform: translateX(4px);
+      }
+      .timeline-card .timeline-action i {
+        font-size: 0.85rem;
       }
       .timeline-card h4 {
         margin-bottom: 0.45rem;
@@ -412,6 +443,16 @@
         }
         .timeline-item::before {
           left: 0;
+        }
+      }
+      @keyframes pulse-dot {
+        0%, 100% {
+          transform: scale(1);
+          box-shadow: 0 0 0 4px rgba(140, 91, 255, 0.12);
+        }
+        50% {
+          transform: scale(1.2);
+          box-shadow: 0 0 0 8px rgba(140, 91, 255, 0.08);
         }
       }
       .project-card {
@@ -660,12 +701,16 @@
           <div class="row gy-4 align-items-start">
             <div class="col-lg-4 d-none d-lg-flex">
               <p class="summary-text">
-                A focused journey across full stack development and UI systems. Each role blends strategy, execution, and strong delivery on polished digital experiences.
+                A focused journey across full stack development and UI systems.
+                Each role blends strategy, execution, and strong delivery on
+                polished digital experiences.
               </p>
             </div>
             <div class="col-lg-8">
               <div class="timeline-container">
-                <div class="timeline-item left animate__animated animate__fadeInLeft">
+                <div
+                  class="timeline-item left animate__animated animate__fadeInLeft"
+                >
                   <div class="timeline-card">
                     <div class="timeline-meta">
                       <span>2024 - Present</span>
@@ -674,14 +719,27 @@
                     <h4>Full Stack Developer</h4>
                     <div class="timeline-role">Independent</div>
                     <ul>
-                      <li>Delivered production-ready web apps with clear UX and strong performance.</li>
-                      <li>Turned vague ideas into scoped roadmaps and shipped milestones quickly.</li>
-                      <li>Optimized Core Web Vitals and improved perceived load speed.</li>
+                      <li>
+                        Delivered production-ready web apps with clear UX and
+                        strong performance.
+                      </li>
+                      <li>
+                        Turned vague ideas into scoped roadmaps and shipped
+                        milestones quickly.
+                      </li>
+                      <li>
+                        Optimized Core Web Vitals and improved perceived load
+                        speed.
+                      </li>
                     </ul>
-                    <div class="timeline-action">View details <i class="fas fa-chevron-down"></i></div>
+                    <div class="timeline-action">
+                      View details <i class="fas fa-chevron-down"></i>
+                    </div>
                   </div>
                 </div>
-                <div class="timeline-item right animate__animated animate__fadeInRight animate__delay-1s">
+                <div
+                  class="timeline-item right animate__animated animate__fadeInRight animate__delay-1s"
+                >
                   <div class="timeline-card">
                     <div class="timeline-meta">
                       <span>2024</span>
@@ -690,14 +748,24 @@
                     <h4>Full Stack Developer Intern</h4>
                     <div class="timeline-role">Future Interns</div>
                     <ul>
-                      <li>Built responsive UI components with modern React patterns.</li>
-                      <li>Integrated APIs and validated data across frontend and backend.</li>
+                      <li>
+                        Built responsive UI components with modern React
+                        patterns.
+                      </li>
+                      <li>
+                        Integrated APIs and validated data across frontend and
+                        backend.
+                      </li>
                       <li>Collaborated in agile sprints and code reviews.</li>
                     </ul>
-                    <div class="timeline-action">View details <i class="fas fa-chevron-down"></i></div>
+                    <div class="timeline-action">
+                      View details <i class="fas fa-chevron-down"></i>
+                    </div>
                   </div>
                 </div>
-                <div class="timeline-item left animate__animated animate__fadeInLeft animate__delay-2s">
+                <div
+                  class="timeline-item left animate__animated animate__fadeInLeft animate__delay-2s"
+                >
                   <div class="timeline-card">
                     <div class="timeline-meta">
                       <span>2023 - Present</span>
@@ -706,11 +774,21 @@
                     <h4>Product Builder</h4>
                     <div class="timeline-role">Personal Labs</div>
                     <ul>
-                      <li>Designed reusable UI systems with clean component boundaries.</li>
-                      <li>Prototyped ideas quickly and iterated based on feedback.</li>
-                      <li>Explored modern stacks, animations, and deployment workflows.</li>
+                      <li>
+                        Designed reusable UI systems with clean component
+                        boundaries.
+                      </li>
+                      <li>
+                        Prototyped ideas quickly and iterated based on feedback.
+                      </li>
+                      <li>
+                        Explored modern stacks, animations, and deployment
+                        workflows.
+                      </li>
                     </ul>
-                    <div class="timeline-action">View details <i class="fas fa-chevron-down"></i></div>
+                    <div class="timeline-action">
+                      View details <i class="fas fa-chevron-down"></i>
+                    </div>
                   </div>
                 </div>
               </div>
