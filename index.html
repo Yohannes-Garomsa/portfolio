@@ -267,6 +267,7 @@
         background: rgba(255, 255, 255, 0.04);
         color: #e8eefb;
         font-size: 0.9rem;
+        transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
       }
       .tag-list {
         gap: 0.75rem;
@@ -274,6 +275,144 @@
       .tag-pill:hover {
         border-color: rgba(140, 91, 255, 0.8);
         color: #fff;
+        transform: translateY(-2px);
+        background: rgba(140, 91, 255, 0.12);
+      }
+      .experience-section {
+        padding: 100px 0;
+        background: rgba(255, 255, 255, 0.02);
+      }
+      .experience-panel {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 32px;
+        padding: 2.5rem;
+        overflow: hidden;
+      }
+      .experience-panel .section-heading {
+        margin-bottom: 2.5rem;
+      }
+      .timeline-container {
+        position: relative;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+      }
+      .timeline-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 100%;
+        background: rgba(140, 91, 255, 0.16);
+      }
+      .timeline-item {
+        position: relative;
+        margin-bottom: 3rem;
+        width: calc(50% - 1.5rem);
+      }
+      .timeline-item.left {
+        left: 0;
+        margin-left: 0;
+      }
+      .timeline-item.right {
+        margin-left: auto;
+      }
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        top: 1.2rem;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: #8c5bff;
+        border: 4px solid rgba(255, 255, 255, 0.06);
+        box-shadow: 0 0 0 4px rgba(140, 91, 255, 0.12);
+      }
+      .timeline-item.left::before {
+        right: -38px;
+      }
+      .timeline-item.right::before {
+        left: -38px;
+      }
+      .timeline-card {
+        background: rgba(5, 11, 29, 0.96);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 24px;
+        padding: 1.8rem;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.22);
+        min-height: 260px;
+      }
+      .timeline-card h4 {
+        margin-bottom: 0.45rem;
+        color: #eef2ff;
+      }
+      .timeline-card .timeline-role {
+        color: #8da1d7;
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+      }
+      .timeline-card .timeline-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+      .timeline-card .timeline-meta span {
+        font-size: 0.78rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #7f8bcf;
+      }
+      .timeline-card ul {
+        padding-left: 1.2rem;
+        margin-bottom: 1.25rem;
+        color: #bfc8e8;
+      }
+      .timeline-card ul li {
+        margin-bottom: 0.8rem;
+        line-height: 1.7;
+      }
+      .timeline-card .timeline-action {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        color: #8c5bff;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 0.82rem;
+      }
+      .timeline-card .timeline-action i {
+        font-size: 0.85rem;
+      }
+      .experience-panel .summary-text {
+        color: #9fb1dd;
+        max-width: 22rem;
+        font-size: 0.97rem;
+      }
+      @media (max-width: 991px) {
+        .timeline-container {
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+        .timeline-container::before {
+          left: 1rem;
+        }
+        .timeline-item {
+          width: 100%;
+          margin-bottom: 2.5rem;
+          padding-left: 2.5rem;
+        }
+        .timeline-item.left,
+        .timeline-item.right {
+          margin-left: 0;
+        }
+        .timeline-item::before {
+          left: 0;
+        }
       }
       .project-card {
         transition: all 0.3s ease;
@@ -503,6 +642,76 @@
                   <span class="tag-pill">Design Systems</span>
                   <span class="tag-pill">API Integration</span>
                   <span class="tag-pill">Clean Architecture</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="experience-section animate-on-scroll">
+      <div class="container">
+        <div class="experience-panel animate__animated animate__fadeInUp">
+          <div class="section-heading text-center">
+            <h2>Professional <span class="text-gradient">Experience</span></h2>
+            <div class="divider"></div>
+          </div>
+          <div class="row gy-4 align-items-start">
+            <div class="col-lg-4 d-none d-lg-flex">
+              <p class="summary-text">
+                A focused journey across full stack development and UI systems. Each role blends strategy, execution, and strong delivery on polished digital experiences.
+              </p>
+            </div>
+            <div class="col-lg-8">
+              <div class="timeline-container">
+                <div class="timeline-item left animate__animated animate__fadeInLeft">
+                  <div class="timeline-card">
+                    <div class="timeline-meta">
+                      <span>2024 - Present</span>
+                      <span>Freelance</span>
+                    </div>
+                    <h4>Full Stack Developer</h4>
+                    <div class="timeline-role">Independent</div>
+                    <ul>
+                      <li>Delivered production-ready web apps with clear UX and strong performance.</li>
+                      <li>Turned vague ideas into scoped roadmaps and shipped milestones quickly.</li>
+                      <li>Optimized Core Web Vitals and improved perceived load speed.</li>
+                    </ul>
+                    <div class="timeline-action">View details <i class="fas fa-chevron-down"></i></div>
+                  </div>
+                </div>
+                <div class="timeline-item right animate__animated animate__fadeInRight animate__delay-1s">
+                  <div class="timeline-card">
+                    <div class="timeline-meta">
+                      <span>2024</span>
+                      <span>Internship</span>
+                    </div>
+                    <h4>Full Stack Developer Intern</h4>
+                    <div class="timeline-role">Future Interns</div>
+                    <ul>
+                      <li>Built responsive UI components with modern React patterns.</li>
+                      <li>Integrated APIs and validated data across frontend and backend.</li>
+                      <li>Collaborated in agile sprints and code reviews.</li>
+                    </ul>
+                    <div class="timeline-action">View details <i class="fas fa-chevron-down"></i></div>
+                  </div>
+                </div>
+                <div class="timeline-item left animate__animated animate__fadeInLeft animate__delay-2s">
+                  <div class="timeline-card">
+                    <div class="timeline-meta">
+                      <span>2023 - Present</span>
+                      <span>Personal Projects</span>
+                    </div>
+                    <h4>Product Builder</h4>
+                    <div class="timeline-role">Personal Labs</div>
+                    <ul>
+                      <li>Designed reusable UI systems with clean component boundaries.</li>
+                      <li>Prototyped ideas quickly and iterated based on feedback.</li>
+                      <li>Explored modern stacks, animations, and deployment workflows.</li>
+                    </ul>
+                    <div class="timeline-action">View details <i class="fas fa-chevron-down"></i></div>
+                  </div>
                 </div>
               </div>
             </div>
