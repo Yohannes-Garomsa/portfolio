@@ -347,7 +347,10 @@
         padding: 1.8rem;
         box-shadow: 0 30px 60px rgba(0, 0, 0, 0.22);
         min-height: 260px;
-        transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+        transition:
+          transform 0.35s ease,
+          box-shadow 0.35s ease,
+          border-color 0.35s ease;
       }
       .timeline-card:hover {
         transform: translateY(-10px) scale(1.02);
@@ -366,7 +369,9 @@
         text-transform: uppercase;
         letter-spacing: 0.08em;
         font-size: 0.82rem;
-        transition: color 0.25s ease, transform 0.25s ease;
+        transition:
+          color 0.25s ease,
+          transform 0.25s ease;
         cursor: pointer;
       }
       .timeline-card .timeline-action:hover {
@@ -446,7 +451,8 @@
         }
       }
       @keyframes pulse-dot {
-        0%, 100% {
+        0%,
+        100% {
           transform: scale(1);
           box-shadow: 0 0 0 4px rgba(140, 91, 255, 0.12);
         }
