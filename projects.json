@@ -3,18 +3,24 @@
     "title": "Eco-Track Web App",
     "description": "A responsive web application for tracking environmental data using Bootstrap and AJAX.",
     "image": "../image/eco-track.jpg",
-    "link": "#"
+    "link": "#",
+    "category": "Web App",
+    "tags": ["Bootstrap", "AJAX", "Responsive"]
   },
   {
     "title": "Ajax User List",
     "description": "Dynamic user list management with AJAX for real-time updates.",
     "image": "../image/ajax-list.jpg",
-    "link": "#"
+    "link": "#",
+    "category": "Interactive UI",
+    "tags": ["AJAX", "UX", "Data"]
   },
   {
     "title": "Bootstrap Portfolio",
     "description": "Modern portfolio website built with Bootstrap components.",
     "image": "../image/portfolio.jpg",
-    "link": "#"
+    "link": "#",
+    "category": "Portfolio",
+    "tags": ["Bootstrap", "Design", "Animation"]
   }
 ]

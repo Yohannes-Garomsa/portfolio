@@ -46,14 +46,21 @@ document.addEventListener("DOMContentLoaded", function () {
       container.innerHTML = ""; // Remove spinner
       data.forEach((project, index) => {
         const card = document.createElement("div");
-        card.className = "col-md-4 mb-4";
+        card.className = "col-sm-6 col-lg-4 mb-4";
+        const tags = project.tags || ["Web", "UI"];
         card.innerHTML = `
           <div class="card project-card h-100">
             <img src="${project.image}" class="card-img-top" alt="${project.title}">
-            <div class="card-body">
+            <div class="card-body d-flex flex-column">
+              <span class="project-label">${project.category || "Featured"}</span>
               <h5 class="card-title">${project.title}</h5>
               <p class="card-text">${project.description}</p>
-              <a href="${project.link}" class="btn btn-primary">View Project</a>
+              <div class="stack-list">
+                ${tags.map((tag) => `<span class="stack-pill">${tag}</span>`).join("")}
+              </div>
+              <div class="mt-auto pt-3">
+                <a href="${project.link}" class="btn btn-primary w-100">View Project</a>
+              </div>
             </div>
           </div>
         `;
